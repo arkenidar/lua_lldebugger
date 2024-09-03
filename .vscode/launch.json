@@ -1,0 +1,42 @@
+{
+    "version": "0.2.0",
+    "configurations": [ // tomblind.local-lua-debugger-vscode
+        {
+            "name": "luajit app.lua",
+            "request": "launch",
+            "type": "lua-local",
+            "program": {
+                "lua": "luajit",
+                "file": "app.lua"
+            },
+            "cwd": "${workspaceFolder}",
+            "stopOnEntry": false
+        },
+        {
+            "name": "embedlua app.lua",
+            "request": "launch",
+            "type": "lua-local",
+            "program": {
+                "command": "${workspaceFolder}/embedlua"
+            },
+            "args": [
+                "app.lua"
+            ],
+            "cwd": "${workspaceFolder}",
+            "stopOnEntry": false
+        },
+        {
+            "name": "love .",
+            "request": "launch",
+            "type": "lua-local",
+            "program": {
+                "command": "love"
+            },
+            "args": [
+                "${workspaceFolder}"
+            ],
+            "cwd": "${workspaceFolder}",
+            "stopOnEntry": false
+        }
+    ]
+} 
